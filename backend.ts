@@ -1,5 +1,6 @@
 import { defineBackend } from '@aws-amplify/backend';
 import { helloWorld } from './function/hello-world/resource';
+import { data } from './data/resource';
 
 const backend = defineBackend({
   helloWorld,
@@ -11,3 +12,6 @@ backend.addOutput({
   },
 });
 
+export const backend = defineBackend({
+  data
+});
